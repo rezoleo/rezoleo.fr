@@ -42,14 +42,6 @@ window.addEventListener('scroll', spy, { passive:true });
 window.addEventListener('resize', spy);
 window.addEventListener('load', spy);
 
-// Parallax background effect on hero
-const gridBg = $('.hero .grid-bg');
-window.addEventListener('mousemove', (e)=>{
-  const x = (e.clientX / window.innerWidth - .5) * 10;
-  const y = (e.clientY / window.innerHeight - .5) * 10;
-  gridBg.style.transform = `translate(${x}px, ${y}px)`;
-});
-
 // Hover tilt on feature cards
 $$('.feature').forEach(card => {
   let raf;

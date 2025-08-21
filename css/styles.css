@@ -5,7 +5,7 @@
   --txt: #e8ecf1;       /* primary text */
   --muted: #9aa5b1;     /* secondary text */
   --accent: #5b9dff;    /* main accent (blue) */
-  --accent-2: #9b5bff;  /* secondary accent (violet) */
+  --accent-2: #95b9b9;  /* secondary accent (violet) */
   --good: #42f59b;      /* green glow */
   --warn: #ffcc66;      /* yellow glow */
   --danger: #ff6b6b;    /* red glow */
@@ -34,8 +34,32 @@ body{
 
 @font-face {
     font-family: 'Oceanic Drift';
-    src: url('../fonts/oceanicdriftcondital.ttf') format('truetype');
+    src: url('../fonts/OceanicDriftSubset.woff2') format('woff2');
     font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/FiraCode-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 a{ color: var(--accent); text-decoration: none; }
