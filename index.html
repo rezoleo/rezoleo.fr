@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rézoléo</title>
-    <meta name="description" content="Rézoléo – Association Loi 1901 qui administre le réseau internet à la résidence Léonard de Vinci (Centrale Lille Institut)." />
+    <meta name="description" content="Rézoléo – Association Loi 1901 qui administre le réseau internet à la résidence Léonard de Vinci (Centrale Lille Institut).">
     <link rel="icon" href="images/rezoleo_logo_light_mode.png">
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <!-- ================= HEADER ================= -->
-    <header class="site-header" role="banner">
+    <header class="site-header">
       <nav class="nav" aria-label="Navigation principale">
         <div class="brand" aria-label="Rézoléo">
           <span class="dot" aria-hidden="true"></span>
@@ -22,7 +23,7 @@
           <li><a class="nav-link" href="#what_we_do">Ce que nous faisons</a></li>
           <li><a class="nav-link" href="#join_us">Nous rejoindre</a></li>
         </ul>
-        <div class="lang" style="margin-left:auto">
+        <div class="lang">
           <a class="btn" href="./index_en.html" title="English version">English version</a>
         </div>
       </nav>
@@ -35,43 +36,37 @@
           <h1>Rézoléo</h1>
           <p class="tagline">Breaking the Internet since 1992</p>
           <div class="logo-container">
-            <img src="images/rezoleo_logo_blanc.svg" alt="Logo Rézoléo" />
+            <img src="images/rezoleo_logo_blanc.svg" alt="Logo Rézoléo" width="150" height="164">
           </div>
           <div class="cta">
             <a class="btn" href="#who_we_are">Découvrir</a>
-            <a class="btn" href="https://poly.rezoleo.fr/doku.php?id=public:histoire_public" target="_blank" rel="noopener">Notre histoire</a>
+            <a class="btn" href="https://poly.rezoleo.fr/doku.php?id=public:histoire_public">Notre histoire</a>
           </div>
         </div>
       </section>
       <!-- ================= WHO WE ARE ================= -->
-      <section id="who_we_are" class="section">
-        <div class="container two-col">
-          <div class="media reveal" id="media-who" data-bg style="background-image:url('images/image_groupe_glitch.jpg')"></div>
-          <article class="card reveal">
-            <div class="kicker">Présentation</div>
-            <h2 class="h2">Qui sommes-nous ?</h2>
-            <p class="lead">Rézoléo est l'association Loi 1901 qui administre le réseau internet à la résidence Léonard de Vinci. Ses membres sont des élèves de Centrale Lille Institut bénévoles. Longtemps rattaché à l'école, le Rézoléo est devenu indépendant en 2017, et est depuis un Fournisseur d'Accès Internet Associatif officiel. L'association propose de nombreux services à tous les élèves de l'institut et aux autres associations, ainsi que de nombreuses formations à destination de ses membres.</p>
-            <p><a class="btn" href="https://poly.rezoleo.fr/doku.php?id=public:histoire_public" target="_blank" rel="noopener">En savoir plus</a></p>
-          </article>
-        </div>
-        <div class="container two-col" style="margin-top:2.25rem;">
-          <article class="card reveal">
-            <div class="kicker">Adhésion</div>
-            <h2 class="h2">Adhérent Connecté</h2>
-            <p class="lead">Chaque résident peut bénéficier d'une connexion internet grâce à la prise ethernet disponible dans sa chambre et via le Wifi accessible dans toute la résidence. Le montant de la cotisation est de 5€ par mois (50€ pour une année). Vous pouvez régler votre cotisation par chèque, virement bancaire, carte bancaire (avec ou sans contact), ou encore en liquide.</p>
-            <p><a class="btn" href="https://re2o.rezoleo.fr/" target="_blank" rel="noopener">Mon compte adhérent</a></p>
-          </article>
-          <div class="media reveal" id="media-member" data-bg style="background-image:url('images/image_cables.jpg')"></div>
-        </div>
-        <div class="container two-col" style="margin-top:2.25rem;">
-          <div class="media reveal" id="media-rules" data-bg style="background-image:url('images/image_dark.jpg')"></div>
-          <article class="card reveal">
-            <div class="kicker">Fédération</div>
-            <h2 class="h2">FedeRez</h2>
-            <p class="lead">Rézoléo est membre de FedeRez, une fédération d'associations étudiantes, qui vise à coordonner et promouvoir les échanges entre les associations d'informatique et de réseau étudiantes françaises. FedeRez organise aussi biannuellement des évènements autour de thèmes liés à l'informatique, auxquels nous participons.</p>
-            <p><a class="btn" href="https://www.federez.net/" target="_blank" rel="noopener">En savoir plus</a></p>
-          </article>
-        </div>
+      <section id="who_we_are" class="section container two-col">
+        <img class="media reveal" id="media-who" src="images/image_groupe_glitch.jpg">
+        <article class="card reveal">
+          <div class="kicker">Présentation</div>
+          <h2 class="h2">Qui sommes-nous ?</h2>
+          <p class="lead">Rézoléo est l'association Loi 1901 qui administre le réseau internet à la résidence Léonard de Vinci. Ses membres sont des élèves de Centrale Lille Institut bénévoles. Longtemps rattaché à l'école, le Rézoléo est devenu indépendant en 2017, et est depuis un Fournisseur d'Accès Internet Associatif officiel. L'association propose de nombreux services à tous les élèves de l'institut et aux autres associations, ainsi que de nombreuses formations à destination de ses membres.</p>
+          <p><a class="btn" href="https://poly.rezoleo.fr/doku.php?id=public:histoire_public">En savoir plus</a></p>
+        </article>
+        <article class="card reveal">
+          <div class="kicker">Adhésion</div>
+          <h2 class="h2">Adhérent Connecté</h2>
+          <p class="lead">Chaque résident peut bénéficier d'une connexion internet grâce à la prise ethernet disponible dans sa chambre et via le Wifi accessible dans toute la résidence. Le montant de la cotisation est de 5€ par mois (50€ pour une année). Vous pouvez régler votre cotisation par chèque, virement bancaire, carte bancaire (avec ou sans contact), ou encore en liquide.</p>
+          <p><a class="btn" href="https://re2o.rezoleo.fr/">Mon compte adhérent</a></p>
+        </article>
+        <img class="media reveal" id="media-member" src="images/image_cables.jpg">
+        <img class="media reveal" id="media-rules" src="images/image_dark.jpg">
+        <article class="card reveal">
+          <div class="kicker">Fédération</div>
+          <h2 class="h2">FedeRez</h2>
+          <p class="lead">Rézoléo est membre de FedeRez, une fédération d'associations étudiantes, qui vise à coordonner et promouvoir les échanges entre les associations d'informatique et de réseau étudiantes françaises. FedeRez organise aussi biannuellement des évènements autour de thèmes liés à l'informatique, auxquels nous participons.</p>
+          <p><a class="btn" href="https://www.federez.net/">En savoir plus</a></p>
+        </article>
       </section>
       <!-- ================= WHAT WE DO ================= -->
       <section id="what_we_do" class="section">
@@ -81,8 +76,8 @@
           <p class="lead">Les nombreux services du Rézoléo en plus de la connexion internet, accessibles gratuitement à tous les membres de Centrale Lille Institut.</p>
           <div class="features">
             <article class="feature reveal">
-              <div class="chip" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="chip">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
                   <path d="M3 5h18M3 12h18M3 19h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
                 Hébergement Web
@@ -91,8 +86,8 @@
               <p>Pour un site personnel, pour une association, pour une liste, ou pour un projet, le Rézoléo propose un hébergement web gratuit à la communauté de l'institut.</p>
             </article>
             <article class="feature reveal">
-              <div class="chip" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="chip">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
                   <path d="M12 17a5 5 0 100-10 5 5 0 000 10z" stroke="currentColor" stroke-width="2"/>
                   <path d="M19.4 15a1.65 1.65 0 012.3.6 10 10 0 11-17.4 0 1.65 1.65 0 012.3-.6 7 7 0 0012.8 0z" stroke="currentColor" stroke-width="2"/>
                 </svg>
@@ -102,8 +97,8 @@
               <p>Besoin de paramétrer un routeur, ou d'installer Linux pour les cours ? Un problème d'ordinateur ? Passe au local pour qu'on puisse y jeter un œil.</p>
             </article>
             <article class="feature reveal">
-              <div class="chip" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="chip">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
                   <path d="M5 3h14M8 7h8M4 7h1m10 14H9m10-4H5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
                 Formations
@@ -112,8 +107,8 @@
               <p>Le Rézoléo propose tout au long de l'année de nombreuses formations ouvertes à tous, sur de nombreux sujets liés à l'informatique.</p>
             </article>
             <article class="feature reveal">
-              <div class="chip" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="chip">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
                   <path d="M4 4h16v6H4zM4 14h16v6H4z" stroke="currentColor" stroke-width="2"/>
                   <path d="M8 7h8M8 17h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
@@ -123,8 +118,8 @@
               <p>Nous hébergeons les données d'associations étudiantes comme l'ensemble des vidéos de Centrale Lille Audiovisuel Production (CLAP).</p>
             </article>
             <article class="feature reveal">
-              <div class="chip" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="chip">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
                   <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 Les mailings-list
@@ -133,8 +128,8 @@
               <p>Nous proposons aux associations de créer et gérer leur liste de diffusion, qui permet de créer une adresse e-mail publique pour un groupe de personnes.</p>
             </article>
             <article class="feature reveal">
-              <div class="chip" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="chip">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
                   <path d="M12 3l9 4.5v9L12 21l-9-4.5v-9L12 3z" stroke="currentColor" stroke-width="2"/>
                   <path d="M12 7v10M7 9.5l10 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
@@ -157,7 +152,7 @@
           <p class="lead">Des permanences sont effectuées en période scolaire tous les lundis et vendredis de 18h à 20h au local Rézo. C'est ici que nous travaillons pour améliorer les services du Rézoléo, que nous récupérons les cotisations, ou tout simplement que nous passons du temps ensemble !</p>
           <div class="split" style="margin-top:1.25rem;">
             <div class="card reveal">
-              <img src="images/rezoleo_map.png" alt="Plan d'accès au local Rézoléo" />
+              <img src="images/rezoleo_map.optim.png" alt="Plan d'accès au local Rézoléo" width="250" height="330">
             </div>
             <div class="card reveal">
               <ul class="contact-list">
@@ -172,29 +167,29 @@
                 <li>
                   <h3>E-mail</h3>
                   <p>
-                    <a href="mailto:contact@rezoleo.fr?subject=Question relative à [...]">contact@rezoleo.fr</a>
+                    <a href="mailto:contact@rezoleo.fr?subject=Question%20relative%20%C3%A0%20%5B...%5D">contact@rezoleo.fr</a>
                   </p>
                 </li>
                 <li>
                   <h3>Réseaux sociaux</h3>
                   <div class="icons">
                     <a class="icon-btn" href="https://twitter.com/rezoleo_ecl" aria-label="Twitter">
-                      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="20" height="20">
                         <path d="M18.244 3H21l-6.53 7.46L22.5 21h-6.15l-4.81-5.54L5.9 21H3.14l6.98-7.97L1.5 3h6.24l4.35 4.99L18.24 3Zm-2.16 16.14h1.7L7.99 4.78H6.19l9.894 14.36Z"/>
                       </svg>
                     </a>
                     <a class="icon-btn" href="https://www.facebook.com/rezoleoeclille/" aria-label="Facebook">
-                      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="20" height="20">
                         <path d="M13.5 9H16l.5-3h-3V4.5c0-.9.3-1.5 1.5-1.5H16V0h-2c-2.4 0-3.5 1.6-3.5 3.8V6H8v3h2.5v9H13.5V9Z"/>
                       </svg>
                     </a>
-                    <a class="icon-btn" href="https://github.com/rezoleo/" aria-hidden="true" aria-label="Github">
-                      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <a class="icon-btn" href="https://github.com/rezoleo/" aria-label="GitHub">
+                      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="20" height="20">
                         <path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.85 3.15 8.96 7.52 10.41.55.1.75-.24.75-.54v-1.88c-3.06.66-3.7-1.31-3.7-1.31-.5-1.28-1.23-1.62-1.23-1.62-1-.67.08-.66.08-.66 1.11.08 1.7 1.14 1.7 1.14.98 1.68 2.58 1.2 3.21.92.1-.7.39-1.2.7-1.48-2.44-.28-5-1.22-5-5.41 0-1.2.43-2.19 1.14-2.96-.12-.28-.5-1.43.11-2.97 0 0 .95-.3 3.11 1.13.9-.25 1.87-.38 2.83-.38.96 0 1.93.13 2.83.38 2.15-1.43 3.1-1.13 3.1-1.13.61 1.54.24 2.69.12 2.97.72.77 1.14 1.76 1.14 2.96 0 4.2-2.57 5.13-5.02 5.4.4.34.75 1.01.75 2.04v3.02c0 .3.2.65.76.54 4.36-1.45 7.51-5.56 7.51-10.4C23.02 5.24 18.27.5 12 .5Z"/>
                       </svg>
                     </a>
-                    <a class="icon-btn" href="https://linkedin.com/company/rezoleo/" aria-hidden="true" aria-label="LinkedIn">
-                      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <a class="icon-btn" href="https://linkedin.com/company/rezoleo/" aria-label="LinkedIn">
+                      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="20" height="20">
                         <path d="M4.98 3.5C4.98 4.88 3.85 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 5 2.12 5 3.5ZM0 8h5v15H0V8Zm7.5 0H12v2.2h.1c.6-1.1 2.1-2.2 4.3-2.2 4.6 0 5.4 3 5.4 6.9V23H17v-7.5c0-1.8 0-4.1-2.5-4.1S12 13.4 12 15.3V23H7.5V8Z"/>
                       </svg>
                     </a>
@@ -209,6 +204,5 @@
     <footer>
       <div class="container">© <span id="year"></span> Rézoléo – Association Loi 1901</div>
     </footer>
-    <script src="js/script.js"></script>
   </body>
 </html>

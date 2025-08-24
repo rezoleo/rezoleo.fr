@@ -4,18 +4,13 @@ const $$ = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
 // Year footer
 $('#year').textContent = new Date().getFullYear();
 
-// Smooth scroll (native behavior with small offset)
-$$('a.nav-link, .cta a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const id = a.getAttribute('href');
-    if(!id.startsWith('#')) return;
-    e.preventDefault();
-    const target = $(id);
-    const y = target.getBoundingClientRect().top + window.scrollY - 90;
-    window.scrollTo({ top: y, behavior: 'smooth' });
-  });
-});
+// const sheet = new CSSStyleSheet();
+// sheet.replaceSync(".reveal { opacity: 0; }");
+// document.adoptedStyleSheets.push(sheet);
 
+const style = document.createElement("style")
+$("head").appendChild(style);
+style.sheet.insertRule(".reveal { opacity: 0; }");
 // Intersection Observer for reveal animations
 const obs = new IntersectionObserver((entries)=>{
   for(const e of entries){ if(e.isIntersecting){ e.target.classList.add('revealed'); obs.unobserve(e.target);} }

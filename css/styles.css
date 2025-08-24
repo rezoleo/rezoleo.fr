@@ -18,6 +18,7 @@
 /* Global reset & base */
 *, *::before, *::after { box-sizing: border-box; }
 html, body { height: 100%; }
+html { scroll-behavior:smooth; }
 
 body{
   margin:0;
@@ -34,15 +35,16 @@ body{
 
 @font-face {
     font-family: 'Oceanic Drift';
-    src: url('../fonts/OceanicDriftSubset.woff2') format('woff2');
+    src: local("Oceanic Drift Condensed Italic"), url('../fonts/OceanicDriftSubset.woff2') format('woff2');
     font-weight: normal;
+    font-display: block;
 }
 
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+  src: local("OpenSans-Regular"), url('../fonts/OpenSans-Regular.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -50,7 +52,7 @@ body{
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+  src: local("OpenSans-Bold"), url('../fonts/OpenSans-Bold.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -58,7 +60,7 @@ body{
   font-family: 'Fira Code';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/FiraCode-Regular.ttf') format('truetype');
+  src: local("FiraCode-Regular"), url('../fonts/FiraCode-RegularSubset.ttf') format('truetype');
   font-display: swap;
 }
 
@@ -66,7 +68,6 @@ a{ color: var(--accent); text-decoration: none; }
 a:hover{ text-decoration: underline; }
 
 img{ max-width:100%; display:block; }
-.sr-only{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
 
 /* ======= Header / Sidebar ======= */
 header.site-header{
@@ -87,7 +88,7 @@ header.site-header{
   border:1px solid rgba(255,255,255,.08);
 }
 .brand .dot{ width:.5rem; height:.5rem; border-radius:50%; background: var(--good); box-shadow:0 0 16px var(--good), 0 0 32px rgba(66,245,155,.45); }
-.nav ul{ list-style:none; margin:0; padding:0; display:flex; gap:.25rem; }
+.nav ul{ list-style:none; margin:0; padding:0; display:flex; gap:.25rem; flex-grow: 1; }
 .nav a.nav-link{
   display:inline-flex; align-items:center; gap:.5rem; padding:.55rem .9rem; border-radius:.9rem;
   color:var(--txt); text-decoration:none; font-weight:600; font-size:.95rem;
@@ -112,7 +113,7 @@ header.site-header{
 
 /* ======= Sections ======= */
 main { width:100%; }
-section.section{ padding: min(12vh, 9rem) 1.25rem; position:relative; }
+section.section{ padding: min(12vh, 9rem) 1.25rem; scroll-margin-top: 90px; position:relative; }
 .container{ width: min(var(--grid-max), calc(100% - 2rem)); margin: 0 auto; }
 
 /* Intro */
@@ -134,7 +135,7 @@ section.section{ padding: min(12vh, 9rem) 1.25rem; position:relative; }
 .hero .cta{ margin-top:1.25rem; display:flex; justify-content:center; gap:.75rem; flex-wrap:wrap; }
 
 /* Who we are */
-.two-col{ display:grid; grid-template-columns: 1.1fr 1fr; gap:2rem; align-items:center; }
+.two-col{ display:grid; grid-template-columns: 1.1fr 1fr; gap:2rem 2.25rem; align-items:center; }
 .card{
   background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
   border: 1px solid rgba(255,255,255,.08);
@@ -163,8 +164,7 @@ section.section{ padding: min(12vh, 9rem) 1.25rem; position:relative; }
 
 /* Media placeholders */
 .media{ aspect-ratio: 16/10; border-radius: var(--radius-lg); overflow:hidden; position:relative; border:1px solid rgba(255,255,255,.08); }
-.media[data-bg]{ background-size: cover; background-position: center; background-repeat: no-repeat; }
-
+img.media { width: 100%; height: 100%; object-fit: cover; }
 
 /* Services grid */
 .features{ display:grid; grid-template-columns: repeat(3, 1fr); gap:1.25rem; margin-top:1.25rem; }
@@ -199,7 +199,7 @@ section.section{ padding: min(12vh, 9rem) 1.25rem; position:relative; }
 footer{ padding: 2rem 1.25rem 3rem; color: var(--muted); text-align:center; }
 
 /* Scroll reveals */
-.reveal{ opacity:0; transform: translateY(16px); transition: all .6s cubic-bezier(.2,.8,.2,1); }
+.reveal{ transform: translateY(16px); transition: all .6s cubic-bezier(.2,.8,.2,1); }
 .reveal.revealed{ opacity:1; transform: none; }
 
 /* Responsive */
@@ -219,4 +219,5 @@ footer{ padding: 2rem 1.25rem 3rem; color: var(--muted); text-align:center; }
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce){
   *{ animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
 }
