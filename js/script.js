@@ -4,10 +4,6 @@ const $$ = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
 // Year footer
 $('#year').textContent = new Date().getFullYear();
 
-// const sheet = new CSSStyleSheet();
-// sheet.replaceSync(".reveal { opacity: 0; }");
-// document.adoptedStyleSheets.push(sheet);
-
 const style = document.createElement("style")
 $("head").appendChild(style);
 style.sheet.insertRule(".reveal { opacity: 0; }");
